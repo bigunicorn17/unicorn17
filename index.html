@@ -5,6 +5,27 @@
     <link rel="stylesheet" href="Styling%20sheet.css">
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+<div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible when the user starts to scroll the page.</div>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
     <script type="text/javascript" src="new-2.js"></script>
     <h1>
     <div1>Running</div1>
